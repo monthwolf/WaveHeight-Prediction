@@ -4,21 +4,21 @@ from sklearn.preprocessing import MinMaxScaler
 from ncread import *
 
 # 创建数据 
-labeltrain = torch.unsqueeze(torch.linspace(-1, 1, 16104), dim=1)
+labeltrain = torch.unsqueeze(torch.linspace(-1, 1, 7320), dim=1)
 labeltest = torch.unsqueeze(torch.linspace(-1, 1, 1464), dim=1)
 xtrain = []
 xtest = []
-mtrain = msl[0:16104:1]
-mtest = msl[16104:17568:1]
-uvtrain = uv10[0:16104:1]
-uvtest = uv10[16104:17568:1]
+mtrain = msl[0:7320:1]
+mtest = msl[7320:8784:1]
+uvtrain = uv10[0:7320:1]
+uvtest = uv10[7320:8784:1]
 
-for i in range(16104):
+for i in range(7320):
   labeltrain[i] = swh[i]
   xtrain.append([mtrain[i],uvtrain[i]])
 
 for i in range(1464):
-  labeltest[i] = swh[i+16104]
+  labeltest[i] = swh[i+7320]
   xtest.append([mtest[i],uvtest[i]])
 x_train = MinMaxScaler().fit_transform(xtrain)
 x_test = MinMaxScaler().fit_transform(xtest)

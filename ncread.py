@@ -1,7 +1,7 @@
 import netCDF4 as nc
 import math
 
-fname = 'wave.bohai.yellow2020.nc'
+fname = 'wavewindF.nc'
 f = nc.Dataset(fname)
 msldata = 'msl'
 u10data = 'u10'
@@ -20,7 +20,8 @@ swh = []
 
 #print(len(msl))
 for i in range(1464):
-    for j in range(12):
-        msl.append(msll[i][j])
-        uv10.append(math.sqrt(u10[i][j]**2 + v10[i][j]**2))
-        swh.append(swhh[i][j])
+    for j in range(3):
+        for k in range(2):
+            msl.append(msll[i][j][k])
+            uv10.append(math.sqrt(u10[i][j][k]**2 + v10[i][j][k]**2))
+            swh.append(swhh[i][j][k])

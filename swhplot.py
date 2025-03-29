@@ -69,14 +69,14 @@ def swhfullin(xtest,ytest,flag):
     plt.plot(prediction4.data.numpy(),'gray',lw=1.5,label='ipso-elm') 
     plt.legend(loc='upper left')
     plt.show()
-
-yhbtest = []
-xhbtest = []
-for i in range(30):
-    yhbtest.append(labeltest[i*48]);
-    xhbtest.append(x_test[i*48]);     #黄海8:00数据
-swhfullin(xhbtest,yhbtest,'hh')
-for i in range(30):
-    yhbtest[i] = labeltest[i*48+6];
-    xhbtest[i] = x_test[i*48+6];     #渤海8:00数据
-swhfullin(xhbtest,yhbtest,'bh')
+#
+# yhbtest = []
+# xhbtest = []
+# for i in range(30):
+#     yhbtest.append(labeltest[i*48]);
+#     xhbtest.append(x_test[i*48]);     #黄海8:00数据
+# swhfullin(xhbtest,yhbtest,'hh')
+# for i in range(30):
+#     yhbtest[i] = labeltest[i*48+6];
+#     xhbtest[i] = x_test[i*48+6];     #渤海8:00数据
+# swhfullin(xhbtest,yhbtest,'bh')

@@ -71,5 +71,5 @@ def reload_params():
   plt.text(max(labeltrain.data),max(prediction.data),'y='+str(p).strip()+'\nRsquare='+str(round(rsquare,4)),verticalalignment="top",horizontalalignment="right")
   plt.show()
  
-#save() 
+save()
 reload_params()

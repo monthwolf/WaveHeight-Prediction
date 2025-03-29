@@ -162,5 +162,5 @@ def reload_params():
     plt.text(max(labeltrain.data),max(prediction.data),'y='+str(p).strip()+'\nRsquare='+str(round(rsquare,4)),verticalalignment="top",horizontalalignment="right")
     plt.show()
 # 运行测试 
-#optimi() 
+optimi()
 reload_params()
